@@ -35,6 +35,8 @@ Route::group(
         Route::post('todos/{id}', [TodosController::class,'update']); 
         Route::delete('todos/{id}', [TodosController::class,'destroy']); 
         Route::post('/logout', [AuthController::class, 'logout']);
+        Route::get('/clients', [AuthController::class, 'index']);
+        Route::get('/users', [AuthController::class, 'users']);
     }
 );
 
